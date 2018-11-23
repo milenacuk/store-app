@@ -15,7 +15,9 @@ const routes =[
 
 { path: '/products', component: AppProducts},
 { path: '/customers', component: AppCustomers, name: 'customers'},
-{ path: '/add-customer', component: AddCustomer, name: "add-customer"}
+{ path: '/add-customer', component: AddCustomer, name: "add-customer"},
+{ path: '/customers/:id', component: LatestPurchases, name: "customer-details"}
+
 ];
 
 const router = new VueRouter({

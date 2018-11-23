@@ -37,6 +37,9 @@ export default class CustomerService {
         let index = customers.indexOf(customer);
         customers.splice(index,1);
     }
+    addProduct(idUser,product){
+        find(userId).products.push(product);
+    }
 }
 
 export const customerService = new CustomerService();

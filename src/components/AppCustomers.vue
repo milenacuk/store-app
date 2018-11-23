@@ -13,7 +13,8 @@
       <th>{{ customer.id }}</th>
       <td>{{ customer.fullName}}</td>
       <td>{{ customer.email }}</td>
-      <td><button class='btn btn-danger' @click="remove(customer)">Remove</button></td>     
+      <td><button class='btn btn-danger' @click="remove(customer)">Remove</button></td>  
+      <td><button @click="showDetails(customer)">Latest Purchases</button></td>   
     </tr>      
   </tbody>
 </table>
@@ -23,6 +24,9 @@
 
 <script>
 import  {customerService}  from '../utils/CustomerService.js'
+import  {productService}  from '../utils/ProductService.js'
+
+
 export default {
     data(){
         return{
@@ -36,6 +40,9 @@ export default {
         } ,
         addCustomer(){
         this.$router.push('add-customer');
+    },
+        showDetails(customer){
+            this$router.push('customer-details', {id: customer.id});
     }
     }
     

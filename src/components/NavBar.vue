@@ -10,7 +10,7 @@
         <router-link class="nav-link" to="/customers">Customers</router-link>
       </li>
       <li class="nav-item">       
-        <router-link class="nav-link" to="/contacts">Contactst</router-link>       
+        <router-link class="nav-link" to="/products">Contacts</router-link>       
       </li>      
     </ul>
   </div>

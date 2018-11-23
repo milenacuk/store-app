@@ -21,6 +21,7 @@ const customers = [
 let nextId = 4;
 
 export default class CustomerService {
+    
     list(){
         return customers;
     }

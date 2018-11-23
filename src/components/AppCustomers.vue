@@ -13,10 +13,11 @@
       <th>{{ customer.id }}</th>
       <td>{{ customer.fullName}}</td>
       <td>{{ customer.email }}</td>
-      <td><button class='btn btn-danger' @click="remove(customer)">Remove</button></td>
+      <td><button class='btn btn-danger' @click="remove(customer)">Remove</button></td>     
     </tr>      
   </tbody>
 </table>
+<center><button @click="addCustomer">Add customer</button></center> 
     </div>
 </template>
 
@@ -32,7 +33,10 @@ export default {
     methods: {
         remove(customer){
             customerService.removeCustomer(customer)
-        } 
+        } ,
+        addCustomer(){
+        this.$router.push('add-customer');
+    }
     }
     
 }
